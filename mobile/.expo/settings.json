@@ -1,0 +1,8 @@
+{
+  "urlRandomness": "ax-bbv",
+  "hostType": "lan",
+  "lanType": "ip",
+  "dev": true,
+  "minify": false,
+  "https": false
+}
