@@ -58,3 +58,18 @@ export const getOrCreateCustomer = async (info, providerName) => {
 
     }
 }
+
+export const me = async userId => {
+    try {
+        const user = await Customer.findById(userId);
+
+        if (!user) {
+            throw new Error('user not exist');
+        }
+
+        return user;
+
+    } catch (error) {
+        throw error;
+    }
+}
