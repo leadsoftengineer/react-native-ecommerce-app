@@ -6,6 +6,8 @@ import { theme } from "./src/constants/theme";
 import Navigation from "./src/screens";
 import { images } from "./src/constants/images";
 import { cacheImages } from "./src/utils/cacheImages";
+import { Provider } from 'mobx-react/native';
+import { store } from './src/models'
 
 export default class App extends React.Component {
   state = {
@@ -33,9 +35,11 @@ export default class App extends React.Component {
       );
     }
     return (
-      <UtilityThemeProvider theme={theme}>
-        <Navigation />
-      </UtilityThemeProvider>
+      <Provider {...store}>
+        <UtilityThemeProvider theme={theme}>
+          <Navigation />
+        </UtilityThemeProvider>
+      </Provider>
     );
   }
 }
