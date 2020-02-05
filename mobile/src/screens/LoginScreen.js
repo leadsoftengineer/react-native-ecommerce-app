@@ -1,15 +1,17 @@
-//leadsoftengineer SERHII SMOLKO 16.01.2020
+//leadsoftengineer SERHII SMOLKO 05.02.2020
 
 import React, { Component } from "react";
 import { Box, Text } from "react-native-design-utility";
 import OnboardingLogo from "../commons/OnboardingLogo";
 import { TouchableOpacity, Image, Alert, Animated } from "react-native";
+import { inject } from 'mobx-react/native';
+
 import LoginButton from "../commons/LoginButton";
 import { GoogleApi } from "../api/Google";
 import { FacebookApi } from "../api/Facebook";
 
 const BoxAnimated = Animated.createAnimatedComponent(Box);
-
+@inject('currentUser')
 export class LoginScreen extends Component {
   state = {
     opacity: new Animated.Value(0),

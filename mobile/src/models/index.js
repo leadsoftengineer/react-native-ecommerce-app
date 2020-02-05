@@ -1,10 +1,10 @@
 //leadsoftengineer SERHII SMOLKO 30.01.2020
 import { CurrentUser } from './CurrentUser';
 
-const CurrentUser = CurrentUser.create();
+const currentUser = CurrentUser.create();
 
 export const store = {
-    CurrentUser
+    currentUser
 };
 
 window.MobxStore = store;

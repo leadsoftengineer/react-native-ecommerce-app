@@ -7,7 +7,7 @@ import Navigation from "./src/screens";
 import { images } from "./src/constants/images";
 import { cacheImages } from "./src/utils/cacheImages";
 import { Provider } from 'mobx-react/native';
-import { store } from './src/models'
+import { store } from './src/models';
 
 export default class App extends React.Component {
   state = {
